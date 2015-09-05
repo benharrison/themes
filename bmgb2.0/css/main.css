@@ -1,0 +1,371 @@
+@font-face {
+        font-family: 'Futura-CondensedExtraBold';
+        src: url('../fonts/fuceb___.eot');
+        src: url('../fonts/fuceb___.eot?#iefix') format('embedded-opentype'),
+                 url('../fonts/fuceb___.woff') format('woff'),
+                 url('../fonts/fuceb___.ttf') format('truetype'),
+                 url('../fonts/fuceb___.svg#fuceb___') format('svg');
+        font-weight: normal;
+        font-style: normal;
+}
+@font-face {
+        font-family: 'Whitney-Book';
+        src: url('../fonts/whitneybook.eot');
+        src: url('../fonts/whitneybook.eot?#iefix') format('embedded-opentype'),
+                 url('../fonts/whitneybook.woff') format('woff'),
+                 url('../fonts/whitneybook.ttf') format('truetype'),
+                 url('../fonts/whitneybook.svg#whitneybook') format('svg');
+        font-weight: normal;
+        font-style: normal;
+}
+
+
+/* http://stackoverflow.com/questions/273964/how-to-change-background-color-on-text-links-on-hover-but-not-image-links */
+a img{ vertical-align:text-bottom; }
+
+/* http://paulirish.com/2012/box-sizing-border-box-ftw */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+} 
+.group:after {
+    clear: both;
+}
+.group {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*
+Global Settings
+================================================================================
+*/
+body
+{
+    background-color:#7e5e00;
+    background-image:url('../images/bg.jpg');
+    background-position:center top;
+    background-attachment:fixed;
+    
+    color:#744a23;
+    font-family:'Whitney-Book', sans-serif;
+    font-size:1.1em;
+    line-height:1.8em;
+}
+
+a, a:visited
+{
+    color:#2eaba7;
+    font-weight:bold;
+}
+a:hover { color:#277a92; text-decoration:none; }
+
+h2
+{
+    font-family:'Futura-CondensedExtraBold', sans-serif;
+    text-transform:uppercase;
+    text-decoration:none;
+    font-size:2.5em;
+    font-weight:normal;
+    letter-spacing:-0.1em;
+    margin-top:0.2em;
+    line-height:0.9em;
+}
+h2 a
+{
+    text-decoration:none;
+}
+
+article
+{
+    margin-bottom: 4em;
+    border-bottom: 1px solid #E3DBC4;
+    padding-bottom: 4em;
+}
+
+article img
+{
+    max-width:100%;
+    height:auto !important;
+}
+
+header, footer
+{
+    padding:1.5em;
+}
+
+header h1 
+{
+    margin:0;
+}
+
+nav
+{
+    background-color:#593d08;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+nav ul
+{
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    height:100%;
+    margin:0;
+    padding:0 0 0 0.5em;
+}
+
+nav ul li
+{
+    float:left;
+    margin:0 0.25em;
+    height:100%;
+    display:block;
+}
+
+nav ul li a, nav ul li a:visited
+{
+    display:block;
+    height:100%;
+    color:#c3b597;
+    text-decoration:none;
+    padding:0.5em 1em;
+}
+
+nav ul li a:hover
+{
+    color:#fcf6e3;
+    background-color:#473106;
+}
+
+footer
+{
+    color:#d9b355;
+    text-shadow:0 2px 0 #000;
+    text-align:right;
+}
+
+/*
+Recipes
+================================================================================
+*/
+
+.bmgb_recipe
+{
+    background-color:#e9e1ca;
+    margin:0 0 0.5em;
+    padding:0.25em 0.5em;
+    
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.bmgb_recipe:hover,
+.bmgb_recipe.active
+{
+    background-color:#ddd3ba;
+}
+
+
+.bmgb_recipe h3
+{
+    margin:0;
+}
+
+.bmgb_recipe h3 a
+{
+    display:block; width:100%; height:100%;
+}
+
+.bmgb_recipe>.bmgb_recipe_content
+{
+    background-color:#fff;
+    padding:0.7em 2em;
+    margin:0.25em 0;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/*
+Layout Basics
+================================================================================
+*/
+.container
+{
+    width:960px;
+    margin:0 auto;
+    position:relative;
+}
+
+#logo
+{
+    width:369px;
+    height:134px;
+    background-image:url('../images/logo.png');
+}
+#logo a {width:100%; height:100%; display:block;}
+#logo a strong {display:none;}
+
+#mobilelogo { display:none; }
+
+#admin
+{
+    display:none; /* show on desktop version */
+    
+    background-color:#000;
+    color:#fff;
+    font-weight:bold;
+    text-decoration:none;
+    padding:0em 0.5em;
+    position:absolute;
+    top:1.5em;
+    right:1.5em;
+    font-size:0.8em;
+    
+    opacity:0.15;
+    -webkit-transition: opacity 0.5s ease-in-out;
+	-moz-transition: opacity 0.5s ease-in-out;
+	-o-transition: opacity 0.5s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+#admin:hover
+{
+    opacity:1;
+}
+
+.padded
+{
+    padding:4%;
+}
+
+#content
+{
+    background-color:#fcf6e3;
+}
+
+#content h2
+{
+    margin-bottom:0;
+}
+
+#content h2 a
+{
+    color:#ff0e5e;
+}
+
+.post_date
+{
+    color:#b59c7f;
+    margin-bottom:2em;
+}
+
+#sidebar
+{
+    background-color:#f1e9d0;
+}
+
+#sidebar h2, #sidebar h2 a
+{
+    color:#85664a;
+    font-size:1.8em;
+}
+
+#sidebar ul
+{
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+
+#sidebar>ul>li
+{
+    margin-bottom: 3em;
+    border-bottom: 1px solid #E3DBC4;
+    padding-bottom: 2em;
+}
+/*
+Responsive - ex, @media all and (max-width: 699px) and (min-width: 520px)
+================================================================================
+*/
+
+/* Mobile */
+@media all and (max-width: 599px)
+{
+    .container {
+        width:95%;
+    }
+    #logo { display:none; }
+    #mobilelogo { 
+        display:inline-block;
+        margin:1em auto;
+        max-width:100%;
+    }
+    #sidebar {
+        border-top:1px solid #e3dbc4;
+    }
+}
+
+/* Tablet */
+@media all and (max-width: 959px) and (min-width: 600px)
+{
+    .container {
+        width:95%;
+    }
+    #sidebar {
+        border-top:1px solid #e3dbc4;
+        /* http://css-tricks.com/snippets/css/clear-fix */
+        content: "";
+        display: table;
+        clear: both;
+    }
+    #sidebar>ul>li {
+        float:left;
+        width:33%;
+        border-bottom-width:0;
+    }
+    #sidebar>ul>li.widget_text { width:100%; border-bottom-width:1px; }
+}
+
+/* Desktop */
+@media all and (min-width: 960px)
+{
+    body {
+        /* consider lightening the color a bit */
+    }
+    .container {
+        width:80%;
+        min-width:960px;
+    }
+    #content {
+        float:left;
+        width:62%;
+    }
+    #sidebar {
+        float:left;
+        width:38%;
+        border-left:1px solid #e3dbc4;
+    }
+    .lt-ie9 #sidebar {
+        border:0 !important;
+    }
+    #admin {
+        display:inline;
+    }
+}
