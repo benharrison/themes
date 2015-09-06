@@ -59,11 +59,12 @@
             <div id="logo">
                 <h2>
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <img id="logo-mobile" src="<?php ThemeUrl('images/header-logo-mobile.jpg') ?>" />
                         <strong><?php bloginfo( 'name' ); ?></strong>
                     </a>
                 </h2>
             </div>
-            <img id="logo-mobile" src="<?php ThemeUrl('images/header-logo-mobile.jpg') ?>" />
+            
         </div>
     </header>
 

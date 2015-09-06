@@ -117,10 +117,10 @@ header #facebook-link img:hover
 {
 header #logo
 {
-    display:none;
+    
 }
 
-header img#logo-mobile
+header #logo img
 {
     display:block;
     max-width:100%;
@@ -136,21 +136,31 @@ header #logo
     max-width:1050px;
     height:280px;
     background-image:url('images/header-logo.jpg');
-    margin:0 auto;
 }
 
-header img#logo-mobile
+header #logo img
 {
     display:none;
 }
+
+header #logo h2
+{
+    padding: 70px;
+    width: 490px;
+    height: 280px;
+}
+
+}
+
+header #logo
+{
+    margin:0 auto;
 }
 
 header #logo h2
 {
     display: block;
-    padding: 70px;
-    width: 490px;
-    height: 280px;
+    margin:0;
 }
 
 header #logo h2 a
