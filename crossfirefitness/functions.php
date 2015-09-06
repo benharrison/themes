@@ -30,4 +30,14 @@ function StripPrefixSlashes($path)
     }
 }
 
+/* Theme setup */
+add_action( 'after_setup_theme', 'wpt_setup' );
+    if ( ! function_exists( 'wpt_setup' ) ):
+        function wpt_setup() {  
+            register_nav_menu( 'primary', __( 'Primary navigation', 'wptuts' ) );
+        } endif;
+
+// Register custom navigation walker
+require_once('wp_bootstrap_navwalker.php');
+
 ?>

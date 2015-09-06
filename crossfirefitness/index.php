@@ -14,6 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="<?php ThemeUrl('font/ProximaNova/stylesheet.css') ?>" rel="stylesheet" media="screen">
         <link href="<?php ThemeUrl('style.css') ?>" rel="stylesheet" media="screen">
         
         <link rel="icon" type="image/png" href="<?php ThemeUrl('images/favicon.png') ?>" />
@@ -24,51 +25,55 @@
 
 <body>
 
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--
+          <a class="navbar-brand" href="#">Project name</a>
+          -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+<?php
+    /* Primary navigation */
+    wp_nav_menu( array(
+      'menu' => 'top_menu',
+      'depth' => 2,
+      'container' => false,
+      'menu_class' => 'nav navbar-nav',
+      //Process nav menu using our custom nav walker
+      'walker' => new wp_bootstrap_navwalker())
+    );
+?>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
     <header>
         <div class="container">
             <div id="logo">
-                <h2>Crossfire Childen's Fitness Ministry</h2>
+                <h2>
+                    <a href="/">
+                        Crossfire Childen's Fitness Ministry
+                    </a>
+                </h2>
             </div>
             <img id="logo-mobile" src="<?php ThemeUrl('images/header-logo-mobile.jpg') ?>" />
-            
-            <a id="facebook-link" href="#">
-                <img src="<?php ThemeUrl('images/facebook-white.png') ?>" />
-            </a>
         </div>
     </header>
 
-<nav class="group">
-<?php
-
-wp_nav_menu( array(
-    'theme_location'  => '',
-    'menu'            => 'navbar',
-    'container'       => false,
-    'container_class' => '',
-    'container_id'    => '',
-    'menu_class'      => 'container',
-    'menu_id'         => '',
-    'echo'            => true,
-    'fallback_cb'     => 'wp_page_menu',
-    'before'          => '',
-    'after'           => '',
-    'link_before'     => '',
-    'link_after'      => '',
-    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-    'depth'           => 0,
-    'walker'          => ''
-) );
-
-?>
-</nav>
-  
     <div id="hero">
         <div class="container">
             <p id="hero-content-heading">
-                Crossfire is a faith-based fitness and nutrition program for kids & families.
+                Faith-based fitness and nutrition program for kids & families.
             </p>
             <p id="hero-content-subheading">
-                With God, grades, exercise & nutrition, there is no finish line!
+                With God, Grades, Exercise & Nutrition, there is NO FINISH LINE!
             </p>
         </div>
     </div>
@@ -136,15 +141,15 @@ wp_nav_menu( array(
   <div class="col-md-8">
     <form class="form-horizontal" role="form">
       <div class="form-group">
-        <label for="inputPassword1" class="col-lg-2 control-label">Name</label>
+        <label for="inputName" class="col-lg-2 control-label">Name</label>
         <div class="col-lg-10">
-          <input type="text" class="form-control" id="inputPassword1" placeholder="Name">
+          <input type="text" class="form-control" id="inputName" placeholder="Name">
         </div>
       </div>
       <div class="form-group">
-        <label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+        <label for="inputEmail" class="col-lg-2 control-label">Email</label>
         <div class="col-lg-10">
-          <input type="email" class="form-control" id="inputEmail1" placeholder="Email Address">
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
         </div>
       </div>
       <div class="form-group">
@@ -161,7 +166,7 @@ wp_nav_menu( array(
     </form>
   </div>
   <div class="col-md-4">
-    <h2>Other Options</h2>
+    <h2>Other Contact Options</h2>
     <a class="btn btn-default btn-block" href="https://www.facebook.com/crossfirechildrensfitnessministries">Facebook</a>
     <a class="btn btn-default btn-block" href="tel:+2764944139">276.494.4139</a>
     <a class="btn btn-default btn-block" href="mailto:crossfirefit@gmail.com">crossfirefit@gmail.com</a>
