@@ -36,7 +36,7 @@ Author URI: http://benharrison.cc
 
 body
 {
-    font-family: 'proxima_nova_rgregular', sans-serif;
+    font-family: 'Proxima Nova', sans-serif;
     font-size:1.5em;
     margin-top:50px;
 }
@@ -146,6 +146,21 @@ header img#logo-mobile
 }
 
 header #logo h2
+{
+    display: block;
+    padding: 70px;
+    width: 490px;
+    height: 280px;
+}
+
+header #logo h2 a
+{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+header #logo h2 a strong
 {
     display:none;
 }

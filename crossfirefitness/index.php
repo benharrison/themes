@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>CrossFire Fitness - <?php wp_title(); ?></title>
+        <title><?php bloginfo( 'name' ); ?> - <?php wp_title(); ?></title>
         
         <meta name="robots" content="index, follow" />
         <meta name="keywords" content="" />
@@ -58,8 +58,8 @@
         <div class="container">
             <div id="logo">
                 <h2>
-                    <a href="/">
-                        Crossfire Childen's Fitness Ministry
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <strong><?php bloginfo( 'name' ); ?></strong>
                     </a>
                 </h2>
             </div>
